@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/judul"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/pendaftaran_karang_taruna"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <TextView
+        android:id="@+id/nama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="48dp"
+        android:text="@string/nama_lengkap"
+        android:textColor="#000000"
+        android:textSize="19sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/judul" />
+
+    <TextView
+        android:id="@+id/jk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="44dp"
+        android:text="@string/jenis_kelamin"
+        android:textColor="#000000"
+        android:textSize="19sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nama" />
+
+    <TextView
+        android:id="@+id/div"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="76dp"
+        android:text="@string/divisi_yg_dituju"
+        android:textColor="#000000"
+        android:textSize="19sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/jk" />
+
+    <EditText
+        android:id="@+id/inputnama"
+        android:layout_width="215dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="41dp"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:textAlignment="textStart"
+        android:textColor="#000000"
+        android:textSize="19sp"
+        app:layout_constraintStart_toEndOf="@+id/nama"
+        app:layout_constraintTop_toBottomOf="@+id/judul"
+        tools:ignore="LabelFor" />
+
+    <RadioGroup
+        android:id="@+id/piljk"
+        android:layout_width="170dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="36dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@+id/jk"
+        app:layout_constraintTop_toBottomOf="@+id/inputnama">
+
+        <RadioButton
+            android:id="@+id/lk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/laki_laki"
+            android:textColor="#000000"
+            android:textSize="19sp" />
+
+        <RadioButton
+            android:id="@+id/pr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/perempuan"
+            android:textColor="#000000"
+            android:textSize="19sp"
+            tools:layout_editor_absoluteX="194dp"
+            tools:layout_editor_absoluteY="166dp" />
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/pil1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="44dp"
+        android:text="@string/kesekretariatan"
+        android:textColor="#000000"
+        android:textSize="19sp"
+        app:layout_constraintStart_toEndOf="@+id/div"
+        app:layout_constraintTop_toBottomOf="@+id/piljk" />
+
+    <CheckBox
+        android:id="@+id/pil2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/humas"
+        android:textColor="#000000"
+        android:textSize="19sp"
+        app:layout_constraintStart_toStartOf="@+id/pil1"
+        app:layout_constraintTop_toBottomOf="@+id/pil1" />
+
+    <CheckBox
+        android:id="@+id/pil3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/event"
+        android:textColor="#000000"
+        android:textSize="19sp"
+        app:layout_constraintStart_toStartOf="@+id/pil2"
+        app:layout_constraintTop_toBottomOf="@+id/pil2" />
+
+    <ImageButton
+        android:id="@+id/btntdk"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginBottom="248dp"
+        android:contentDescription="@string/todo1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btndft"
+        app:srcCompat="@android:drawable/ic_delete" />
+
+    <ImageButton
+        android:id="@+id/btndft"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginBottom="248dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:drawable/ic_input_add"
+        android:contentDescription="@string/todo2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
